@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body{
+    width: 100%;
+    height: 150%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Montserrat'; 
+    overflow-x: hidden;
+}
+
+aside div{
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:white;
+}
+
+aside div img{
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+}
+
+.logo{
+    text-align: center;
+    padding-top: 50px;
+}
+
+nav{
+    text-align: center;
+    overflow: hidden;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: lighter;
+    color: black;
+    font-size: 1.25vw;
+}
+/*
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}*/
+
+.background_pic{
+    width: 100vw;
+    height: auto;
+    padding: 50px 0px;
+    margin: 0;
+}
+
+.white /*Biały blok przez pozycję relative "wchodzi" na aside z pozycją "fixed"*/
+{
+    position: relative;
+    bottom: 110vh;
+    left: 15vw;
+    background-color: RGBA(255,255,255,0.9);
+    height: 90vh;
+    width: 80vw;
+    border: 2px grey dashed;
+}
+
+.beige{
+    position: relative;
+    background-color: #CBB794;
+    height: 70%;
+    width: 35%;
+    bottom: 190vh;
+    left: 60vw;
+}
+/*
+.curves_top{
+    width: 30%;
+    position: absolute;
+    top: 65vh;
+    left: 40vw;
+}
+/*
+.curves_bottom{
+    width: 30%;
+    position: absolute;
+    top: 100vh;
+    left: 45vw;
+}
+/*
+
+.paragraph_register{
+    margin-top: -250vh;
+    margin-left: 70vw;
+    position: absolute;
+    width: 15vw;
+    text-align: center;
+    color: white;
+    font-weight: 501;
+}
+
+.paragraph_register2{
+    margin-top: -235vh;
+    margin-left: 67vw;
+    position: absolute;
+    width: 15vw;
+    text-align: center;
+    color: white;
+    font-weight: 501;
+}
+*/
+
+
+

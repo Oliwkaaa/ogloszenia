@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body{
-    width: 100%;
-    height: 150%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -51,12 +49,6 @@ nav ul li a{
     color: black;
     font-size: 1.25vw;
 }
-/*
-.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-}*/
 
 .background_pic{
     width: 100vw;
@@ -65,61 +57,88 @@ nav ul li a{
     margin: 0;
 }
 
+.wrapper{
+    position: relative;
+    height: 1000px;
+}
+
 .white /*Biały blok przez pozycję relative "wchodzi" na aside z pozycją "fixed"*/
 {
     position: relative;
     bottom: 110vh;
     left: 15vw;
     background-color: RGBA(255,255,255,0.9);
-    height: 90vh;
+    height: 100vh;
     width: 80vw;
-    border: 2px grey dashed;
+    border: 1px grey solid;
 }
 
-.beige{
-    position: relative;
+.beige{ 
+    position: absolute;
     background-color: #CBB794;
-    height: 70%;
-    width: 35%;
-    bottom: 190vh;
-    left: 60vw;
+    height: 80vh;
+    width: 30vw;
+    top: 35vh;
+    right: 10vw;
 }
-/*
+
 .curves_top{
     width: 30%;
     position: absolute;
-    top: 65vh;
-    left: 40vw;
+    top: 50vh;
+    left: 35vw;
 }
-/*
+
 .curves_bottom{
     width: 30%;
     position: absolute;
     top: 100vh;
     left: 45vw;
 }
-/*
 
-.paragraph_register{
-    margin-top: -250vh;
-    margin-left: 70vw;
+.p_white{
     position: absolute;
     width: 15vw;
     text-align: center;
     color: white;
-    font-weight: 501;
+    font-weight: bolder;
 }
 
-.paragraph_register2{
-    margin-top: -235vh;
-    margin-left: 67vw;
-    position: absolute;
-    width: 15vw;
-    text-align: center;
+.paragraph_register_top{
+    top: 45vh;
+    right: 18vw;
+}
+
+.paragraph_register_middle{
+    top: 65vh;
+    right: 21vw;
+}
+
+.paragraph_register_bottom{
+    top: 96.5vh;
+    right: 11vw;
+}
+
+.p_join_us{
+    top: 43vh;
+    right: 46vw;
+    color: black;
+    font-size: 1.3em;
+}
+
+.p_login{
+    top: 93vh;
+    right: 38vw;
+    color: black;
+    font-size: 1.3em;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: grey;
     color: white;
-    font-weight: 501;
 }
-*/
-
-
-

@@ -11,10 +11,10 @@
 <body>
 <aside> <!--menu, media handlers-->
     <div> <!--menu, media handlers-->
-        <img src="menu.svg" align="left">
-        <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" align="right"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="twitter.png" align="right"></a>
-        <a href="https://www.facebook.com" target="_blank"><img src="fb.png" align="right"></a>
+        <img src="pics/menu.svg" align="left"><!--Powiększyć ikonę menu-->
+        <a href="https://www.instagram.com" target="_blank"><img src="pics/instagram.png" align="right"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="pics/twitter.png" align="right"></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="pics/fb.png" align="right"></a>
     </div>
 </aside>
 
@@ -32,43 +32,42 @@
 </nav>
 
 <main> 
+  <div class="wrapper"> <!--Display div on div-->
     <div> <!--big pic-->
-        <img class="background_pic" src="background_pic_copy.png">
+        <img class="background_pic" src="pics/background_pic_copy.png">
     </div>
 
-    <div class="white"> <!--white transparent block-->
 
-    </div>
+      <div class="white"> <!--white transparent block-->
 
-    <div class="beige"><!--beige block-->
+      </div>
+
+      <div class="beige"><!--beige block--></div>
+
+      <p class="p_white p_join_us">Dołącz do nas!</p>
+      <img class="curves_top" src="pics/ju_curves.svg"> 
     
-    </div>
+      <p class="p_white paragraph_register_top">Brak perkusisty w zespole? To nie problem!</p>
+      <p class="p_white paragraph_register_middle"> A może chcesz spróbować swoich sił w duecie?</p>
+    
+      <p class="p_white p_login">Zaloguj się!</p>
+      
+      <img class="curves_bottom" src="pics/li_curves.svg">
+      <p class="p_white paragraph_register_bottom">Masz już konto?</p>
 
-  <!--  <img class="curves_top" src="ju_curves.svg"> 
-    <div>
-       <p class="paragraph_register">Brak perkusisty w zespole? To nie problem!</p>
-       <p class="paragraph_register2"> A może chcesz spróbować swoich sił w duecie?</p>
-    </div>
-    <img class="curves_bottom" src="li_curves.svg">
--->
+  
+
+  </div> <!--Display div on div-->
+
 </main>
 
-<!--
-<script>
-        window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-        </script>
-    -->
+<footer>
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</footer>
+
 
 </body>
 

@@ -73,20 +73,6 @@ aside{/*"top menu" with icon and search bar TO-DO: ADD LANGUAGES*/
     cursor: pointer; 
 }
 
-.form_popup{
-    display: none;
-    position: fixed;
-    bottom: 50%;
-    right: 50%;
-    z-index: 9;
-}
-
-.form_container{
-    max-width: 300px;
-    padding: 10px;
-    background-color: black;
-}
-
 .search_container{
     width: 20%;
     border: transparent;

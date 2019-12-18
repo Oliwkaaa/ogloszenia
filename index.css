@@ -8,7 +8,60 @@ body{
     overflow-x: hidden;
 }
 
-aside div{
+
+.overlay{/*Curtain menu opened*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a{
+    padding: 20px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+
+.overlay .closebtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px){
+    .overlay a{
+        font-size:20px;
+    }
+    .overlay .closebtn{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+aside{/*"top menu" with icon and search bar TO-DO: ADD LANGUAGES*/
     border: 1px solid black;
     position: fixed;
     top: 0;
@@ -16,10 +69,60 @@ aside div{
     background-color:white;
 }
 
-aside div img{
-    height: 20px;
-    width: 20px;
-    margin: 10px;
+.open_button{
+    cursor: pointer; 
+}
+
+.form_popup{
+    display: none;
+    position: fixed;
+    bottom: 50%;
+    right: 50%;
+    z-index: 9;
+}
+
+.form_container{
+    max-width: 300px;
+    padding: 10px;
+    background-color: black;
+}
+
+.search_container{
+    width: 20%;
+    border: transparent;
+    float: right;
+    padding: 15px 10px;
+}
+.search_input{
+    width: 100%;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+    color: #575756;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); 
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+    border-radius: 50px;
+    border: 1px solid #575756;
+    transition: all 250mx ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d; 
+}
+
+.search_input::placeholder{
+    color: color(#575756 a(0.8));
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search_input:hover, .search_input:focus{
+    outline: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    border-radius: 0;
+    background-position: 100% center;
 }
 
 .logo{
@@ -32,7 +135,7 @@ nav{
     overflow: hidden;
 }
 
-nav ul{
+nav ul{ /*"main" nav with home, contact etc.*/
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -59,7 +162,6 @@ nav ul li a{
 
 .wrapper{
     position: relative;
-    height: 1000px;
 }
 
 .white /*Biały blok przez pozycję relative "wchodzi" na aside z pozycją "fixed"*/
@@ -133,12 +235,23 @@ nav ul li a{
     font-size: 1.3em;
 }
 
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 15%;
-    background-color: grey;
-    color: white;
+
+.center::after{
+    content: "";
+    clear:both;
+    display: table;
 }
+
+.pic{
+    float: right;
+    width: 10%;
+}
+
+.center img{
+    width: 40px;
+    height: 40px;
+    margin-right: 37vw;
+    margin-top: 220px;
+ 
+}
+

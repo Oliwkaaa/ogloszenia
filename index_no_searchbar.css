@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Montserrat'; 
+    overflow-x: hidden;
+}
+
+.menu{
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 20px;
+    display: block;
+    float: left;
+    width: 10px;
+}
+
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay a{
+    padding: 20px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+
+.overlay .closebtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px){
+    .overlay a{font-size:20px}
+    .overlay .closebtn{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+aside div{
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:white;
+}
+
+aside div img{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.logo{
+    text-align: center;
+    padding-top: 50px;
+}
+
+nav{
+    text-align: center;
+    overflow: hidden;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: lighter;
+    color: black;
+    font-size: 1.25vw;
+}
+
+.background_pic{
+    width: 100vw;
+    height: auto;
+    padding: 50px 0px;
+    margin: 0;
+}
+
+.wrapper{
+    position: relative;
+    height: 1000px;
+}
+
+.white /*Biały blok przez pozycję relative "wchodzi" na aside z pozycją "fixed"*/
+{
+    position: relative;
+    bottom: 110vh;
+    left: 15vw;
+    background-color: RGBA(255,255,255,0.9);
+    height: 100vh;
+    width: 80vw;
+    border: 1px grey solid;
+}
+
+.beige{ 
+    position: absolute;
+    background-color: #CBB794;
+    height: 80vh;
+    width: 30vw;
+    top: 35vh;
+    right: 10vw;
+}
+
+.curves_top{
+    width: 30%;
+    position: absolute;
+    top: 50vh;
+    left: 35vw;
+}
+
+.curves_bottom{
+    width: 30%;
+    position: absolute;
+    top: 100vh;
+    left: 45vw;
+}
+
+.p_white{
+    position: absolute;
+    width: 15vw;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.paragraph_register_top{
+    top: 45vh;
+    right: 18vw;
+}
+
+.paragraph_register_middle{
+    top: 65vh;
+    right: 21vw;
+}
+
+.paragraph_register_bottom{
+    top: 96.5vh;
+    right: 11vw;
+}
+
+.p_join_us{
+    top: 43vh;
+    right: 46vw;
+    color: black;
+    font-size: 1.3em;
+}
+
+.p_login{
+    top: 93vh;
+    right: 38vw;
+    color: black;
+    font-size: 1.3em;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: RGB(237, 237, 237);
+    border-top: 1px grey dotted;
+}
+
+footer img{
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    width: 10%;
+}

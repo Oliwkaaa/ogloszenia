@@ -1,3 +1,7 @@
+<!--Index.php = registration/login -->
+<!--Home.php = main page -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

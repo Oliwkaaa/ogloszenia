@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogłoszenia muzyczne</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="hero">
+
+    <aside> <!--menu,searchbar-->
+
+        <div> <!--menu button-->
+            <span class="menu" onclick="openNav()">&#9776;</span>
+            <!--<img src="pics/menu.svg" onclick="openNav()" align="left">--><!--Powiększyć ikonę menu-->
+        </div> <!--menu button-->
+    
+        <div> <!--login/registration button-->
+            <img src="pics/login.png" class="open_button" style="width:2vw; float:right; padding:10px; cursor:pointer;" onclick="openLoginForm()">
+        </div>
+    
+        <div class="search_container">
+            <input class="search_input" type="text" placeholder="   Search">
+        </div>
+    
+    </aside>
+
+
+
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()"> Login In</button>
+            <button type="button" class="toggle-btn" onclick="register()"> Register</button>
+        </div>
+        <div> 
+            <img class="logo" src="pics/LOGO.svg"> 
+        </div>
+        <form id="login" class="input-group" action="log_in.php" method="POST">
+                <input type="text" class="input-field" name="login" placeholder="Username" required>
+                <input type="password" class="input-field" name="password" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log in</button>
+                <a href="#">Forgot your password?</a> <!--Zamienić na link do przypomnienia-->
+                
+        </form>
+        <form id="register" class="input-group" action="register.php" method="POST">
+                <input type="text" class="input-field" name="login" placeholder="Username" required>
+                <input type="email" class="input-field" name="email" placeholder="Email" required>
+                <input type="password" class="input-field" name="password" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box">
+                <span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+        </form>
+
+        
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+    </script>
+</div>
+</body>

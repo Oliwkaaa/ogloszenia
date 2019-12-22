@@ -31,6 +31,7 @@ p{
 }
 
 .form-box{
+    top: 25px;
     width: 380px;
     height: 480px;
     position: relative;
@@ -130,7 +131,7 @@ span{
     left: 75px;
 }
 
-a{
+.form-box a{
     color: #777;
     font-size: 13px;
     position: absolute;
@@ -146,8 +147,24 @@ a{
     left: 450px;
 }
 
+.desc{
+    color: lightgray;
+    width: 30vw;
+    float: right;
+    position: relative;
+    bottom: 60vh;
+    right: 15vw;
+}
 
+p{
+    padding: 10px 0;
+    font-size: 1.2em;
+}
 
+h1{
+    letter-spacing: 3px;
+    font-weight: light;
+}
 
 .menu{ /*Menu icon*/
     font-size: 30px;
@@ -158,10 +175,83 @@ a{
     width: 10px;
     top: 3px;
     left: 5px;
-    color: #06022e;
+    color: whitesmoke;
+    float: left;
 }
 
-aside{/*"top menu" with icon and search bar TO-DO: ADD LANGUAGES*/
+
+.overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay .closebtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    padding: 0;
+    width: 60px;
+    cursor: pointer;
+}
+
+
+.overlay a{
+    padding: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    top: 100px;
+}
+
+.overlay-content{ /*Links?*/
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    display: block;
+    right: 60px;
+}
+
+
+.overlay a:hover, .overlay a:focus{
+    color: whitesmoke;
+}
+
+@media screen and (max-height: 450px){
+    .overlay a{
+        font-size:20px;
+    }
+    .overlay .closebtn{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.pic{
+    padding: 50px 10px;
+    display: inline-block;
+}
+
+.pic img{
+    height: 30px;
+    width: 30px;
+}
+
+header{/*"top menu" with icon and search bar TO-DO: ADD LANGUAGES*/
     position: fixed;
     top: 0;
     height: 50px;
@@ -169,9 +259,31 @@ aside{/*"top menu" with icon and search bar TO-DO: ADD LANGUAGES*/
     background-color: rgb(226, 206, 172);
 }
 
-.open_button{
-    cursor: pointer; 
+header::after{
+    content: '';
+    display:table;
+    clear:both;
 }
+
+nav{
+    float: left;
+    padding-left: 100px;
+    margin: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block; 
+    margin-left: 0 35px;
+    padding: 15px 10px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
 
 .search_container{
     width: 20%;
@@ -186,28 +298,28 @@ aside{/*"top menu" with icon and search bar TO-DO: ADD LANGUAGES*/
     transition: transform 250ms ease-in-out;
     font-size: 14px;
     line-height: 25px;
-    color: #575756;
+    color: whitesmoke;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E"); 
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-position: 95% center;
     border-radius: 50px;
-    border: 1px solid #575756;
+    border: 1px solid whitesmoke;
     transition: all 250mx ease-in-out;
     backface-visibility: hidden;
     transform-style: preserve-3d; 
 }
 
 .search_input::placeholder{
-    color: color(#575756 a(0.8));
+    color: whitesmoke;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
 }
 
 .search_input:hover, .search_input:focus{
     outline: none;
     border: 1px solid transparent;
-    border-bottom: 1px solid #575756;
+    border-bottom: 1px solid whitesmoke;
     border-radius: 0;
     background-position: 100% center;
 }

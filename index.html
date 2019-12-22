@@ -4,29 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogłoszenia muzyczne</title>
+    <title>Ogłoszenia muzyczne | Rejestracja</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
 <div class="hero">
 
-    <aside> <!--menu,searchbar-->
+    <div id="nav-ogloszenia" class="overlay"> <!--Curtain menu-->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
+    <div class="overlay-content">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+
+            <div class="pic">
+                <a href="https://www.twitter.com" target="_blank"><img src="pics/tw_light.png"></a>
+            </div>
+            <div class="pic">
+                <a href="https://www.facebook.com" target="_blank"><img src="pics/fb_light.png"></a>
+            </div>
+            <div class="pic"> 
+                    <a href="https://www.instagram.com" target="_blank"><img src="pics/instagram_light.png"></a>
+            </div>
+    </div> <!--Overlay Content-->
+       
+
+    </div>
+
+    <header>
         <div> <!--menu button-->
             <span class="menu" onclick="openNav()">&#9776;</span>
-            <!--<img src="pics/menu.svg" onclick="openNav()" align="left">--><!--Powiększyć ikonę menu-->
         </div> <!--menu button-->
-    
-        <div> <!--login/registration button-->
-            <img src="pics/login.png" class="open_button" style="width:2vw; float:right; padding:10px; cursor:pointer;" onclick="openLoginForm()">
-        </div>
-    
-        <div class="search_container">
-            <input class="search_input" type="text" placeholder="   Search">
-        </div>
-    
-    </aside>
 
+    <nav>
+        <ul>
+            <li><a href="#">Dodaj ogłoszenie</a></li>
+            <li><a href="#">Szukaj czegoś</a></li>
+            <li><a href="#">Kategorie</a></li>
+        </ul>
+    </nav>
+
+    <div class="search_container">
+        <input class="search_input" type="text" placeholder="   Search">
+    </div>
+
+</header>
 
 
     <div class="form-box">
@@ -54,10 +81,18 @@
                 <span>I agree to the terms & conditions</span>
                 <button type="submit" class="submit-btn">Register</button>
         </form>
-
-        
     </div>
 
+        <div class="desc">
+            <h1>Brak perkusisty w zespole? A może chcesz spróbować swoich sił w duecie?</h1>
+            
+            <p> Ogłoszenia muzyczne to platforma, która ułatwi Ci znalezienie tego, czego szukasz.</p>
+        </div>
+
+        
+
+
+</div>
     <script>
         var x = document.getElementById("login");
         var y = document.getElementById("register");
@@ -73,6 +108,13 @@
             y.style.left = "450px";
             z.style.left = "0";
         }
+
+        function openNav(){
+        document.getElementById("nav-ogloszenia").style.width = "100%";
+    }
+
+    function closeNav(){
+        document.getElementById("nav-ogloszenia").style.width = "0%";
+    }
     </script>
-</div>
 </body>
